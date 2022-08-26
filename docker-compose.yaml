@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+    nodeserver:
+        build:
+            context: ./app
+        ports:
+            - "8080:8080"
+    nginx:
+        restart: always
+        depends_on:
+          - nodeserver
+        build:
+            context: ./nginx
+        ports:
+            - "40:80"
