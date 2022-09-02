@@ -6,6 +6,7 @@ COPY . .
 # install app dependencies
 RUN npm install --quiet
 
+ENV PORT=8080
 
 # the command that starts our app
-CMD ["node", "index.js"]
+CMD ["npm", "start"]
