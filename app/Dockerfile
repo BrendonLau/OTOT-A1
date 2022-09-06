@@ -7,6 +7,7 @@ COPY . .
 RUN npm install --quiet
 
 ENV PORT=8080
+EXPOSE 8080
 
 # the command that starts our app
 CMD ["npm", "start"]

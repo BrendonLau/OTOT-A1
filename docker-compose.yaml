@@ -3,8 +3,6 @@ services:
     nodeserver:
         build:
             context: ./app
-        ports:
-            - "8080:8080"
     nginx:
         restart: always
         depends_on:
@@ -12,4 +10,4 @@ services:
         build:
             context: ./nginx
         ports:
-            - "40:80"
+            - "3000:80"
